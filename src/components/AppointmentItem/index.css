@@ -1,0 +1,38 @@
+/* Write your CSS here */
+
+.li-con {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  width: 30%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #b5b7c4;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.name-item {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #171f46;
+  margin-top: 0;
+}
+.date-item {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #b5b7c4;
+  margin-bottom: 0;
+}
+
+.star-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+.star-img {
+  width: 20px;
+  height: 20px;
+}

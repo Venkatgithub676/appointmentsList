@@ -1,0 +1,100 @@
+/* Write your CSS here */
+
+.bg-container {
+  background-image: linear-gradient(to bottom, #9796f0, #fbc7d4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px 60px 40px 60px;
+  margin-top: 40px;
+}
+.add-appointment-heading {
+  font-size: 30px;
+  font-family: 'Roboto';
+}
+.form-img-con {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-heading-con {
+  width: 40%;
+}
+
+.form {
+  width: 100%;
+}
+.label {
+  font-family: 'Roboto';
+  color: #b5b7c4;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.input {
+  outline: none;
+  width: 80%;
+  height: 35px;
+  padding: 10px 15px 10px 15px;
+
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 2px solid #b5b7c4;
+}
+
+.add-btn {
+  width: 60px;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  height: 30px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.appointments-img {
+  max-width: 400px;
+  width: 100%;
+}
+
+.btn-appt-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.starred-btn {
+  width: 80px;
+  height: 30px;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Roboto';
+  font-weight: 500;
+}
+.unstarred-btn {
+  width: 80px;
+  height: 30px;
+  background-color: #ffffff;
+  color: #8b5cf6;
+  border: 1px solid #8b5cf6;
+  border-radius: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.ul-con {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
