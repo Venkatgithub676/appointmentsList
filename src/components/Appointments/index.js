@@ -28,6 +28,8 @@ class Appointments extends Component {
     this.setState(prevState => ({
       appointmentList: [...prevState.appointmentList, newObj],
       savedList: [...prevState.appointmentList, newObj],
+      name: '',
+      date: '',
     }))
   }
 
@@ -38,22 +40,25 @@ class Appointments extends Component {
           id === each.id ? {...each, isStarred: !each.isStarred} : each,
         ),
       ],
+      savedList: [
+        ...prevState.savedList.map(each =>
+          id === each.id ? {...each, isStarred: !each.starred} : each,
+        ),
+      ],
     }))
   }
 
   onClickStarredBtn = () => {
     this.setState(prevState => ({
-      appointmentList: [
-        ...prevState.appointmentList.filter(each => each.isStarred),
-      ],
+      savedList: [...prevState.appointmentList.filter(each => each.isStarred)],
       starred: !prevState.starred,
     }))
   }
 
   render() {
-    const {appointmentList, savedList, starred} = this.state
+    const {appointmentList, savedList, starred, name, date} = this.state
     const btnRes = starred ? 'starred-btn' : 'unstarred-btn'
-    const listItems = starred ? appointmentList : savedList
+    const listItems = starred ? savedList : appointmentList
     console.log(appointmentList)
     return (
       <div className="bg-container">
@@ -71,6 +76,7 @@ class Appointments extends Component {
                   type="text"
                   className="input"
                   placeholder="Title"
+                  value={name}
                   onChange={this.onChangeText}
                 />
                 <br />
@@ -84,6 +90,7 @@ class Appointments extends Component {
                   className="input"
                   onChange={this.onChangeDate}
                   placeholder=""
+                  value={date}
                 />
                 <br />
                 <button
@@ -103,7 +110,7 @@ class Appointments extends Component {
           </div>
           <hr />
           <div className="btn-appt-con">
-            <h1>Appointments</h1>
+            <h1 className="apt-heading">Appointments</h1>
             <button
               className={btnRes}
               type="button"

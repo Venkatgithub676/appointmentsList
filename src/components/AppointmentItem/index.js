@@ -1,9 +1,13 @@
 // Write your code here
+import {format} from 'date-fns'
+
 import './index.css'
 
 const AppointmentItem = props => {
   const {each, onClickStarBtn} = props
   const {name, date, id, isStarred} = each
+  const dateAndTime = format(new Date(date), 'dd MMMM yyyy, EEEE')
+  console.log(dateAndTime)
 
   const res = isStarred
     ? 'https://assets.ccbp.in/frontend/react-js/appointments-app/filled-star-img.png'
@@ -16,13 +20,13 @@ const AppointmentItem = props => {
   return (
     <li className="li-con">
       <div className="name-date-con">
-        <h1 className="name-item">{name}</h1>
-        <p className="date-item">{date}</p>
+        <p className="name-item">{name}</p>
+        <p className="date-item">{`Date: ${dateAndTime}`}</p>
       </div>
 
       <button
         className="star-btn"
-        data-testid="button"
+        data-testid="star"
         type="button"
         onClick={starBtn}
         alt=""

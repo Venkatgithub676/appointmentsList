@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
-
   width: 30%;
   padding: 14px;
   border-radius: 10px;
@@ -12,19 +11,37 @@
   margin-right: 20px;
   margin-bottom: 20px;
 }
+
+@media screen and (max-width: 768px) {
+  .li-con {
+    margin-right: 0;
+    width: 100%;
+  }
+}
 .name-item {
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 15px;
   color: #171f46;
   margin-top: 0;
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .name-item {
+    font-size: 15px;
+  }
 }
 .date-item {
   font-family: 'Roboto';
-  font-size: 18px;
+  font-size: 15px;
   color: #b5b7c4;
   margin-bottom: 0;
+  font-weight: 600;
 }
-
+@media screen and (max-width: 768px) {
+  .date-item {
+    font-size: 12px;
+  }
+}
 .star-btn {
   border: none;
   background-color: transparent;
